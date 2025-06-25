@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MathSecure - Segurança Digital através da Matemática</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">MathSecure</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="matematica.html">Matemática das Senhas</a></li>
+                <li><a href="gerador.html">Gerador de Senhas</a></li>
+                <li><a href="verificador.html">Verificador de Força</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+        <main>
+        <section class="hero">
+            <h1>Proteja seus Dados com a Matemática</h1>
+            <p>Entenda como conceitos matemáticos podem criar senhas inquebráveis e proteger sua vida digital</p>
+            <a href="matematica.html" class="cta-button">Saiba Mais</a>
+        </section>
+
+        <section class="features">
+            <div class="feature-card">
+                <h2>Entropia de Senhas</h2>
+                <p>Entenda como a teoria da informação mede a segurança de uma senha</p>
+            </div>
+            <div class="feature-card">
+                <h2>Algoritmos Seguros</h2>
+                <p>Como funções matemáticas criam hashes seguros para armazenamento</p>
+            </div>
+            <div class="feature-card">
+                <h2>Gerador Matemático</h2>
+                <p>Crie senhas usando princípios matemáticos comprovados</p>
+            </div>
+        </section>
+    </main>
+        <main class="content-page">
+        <h1>A Matemática por trás das Senhas Seguras</h1>
+        
+        <section>
+            <h2>Entropia e Complexidade</h2>
+            <p>A entropia de uma senha mede sua imprevisibilidade. Calculamos usando:</p>
+            <p class="formula">H = L × log₂(N)</p>
+            <p>Onde:
+                <br>H = Entropia em bits
+                <br>L = Comprimento da senha
+                <br>N = Tamanho do conjunto de caracteres possíveis
+            </p>
+        </section>
+        
+        <section>
+            <h2>Probabilidade de Quebra</h2>
+            <p>O tempo estimado para quebrar uma senha por força bruta:</p>
+            <p class="formula">T = (N^L) / (A × 10⁹)</p>
+            <p>Onde:
+                <br>A = Tentativas por segundo (ex: 1 bilhão)
+                <br>Resultado em segundos
+            </p>
+        </section>
+        
+        <section>
+            <h2>Dicas Matemáticas para Senhas</h2>
+            <ul>
+                <li>Use a fórmula do comprimento: 12 caracteres mínimo</li>
+                <li>Combine conjuntos: N = 26 (letras) + 26 (maiúsculas) + 10 (dígitos) + 32 (símbolos) = 94</li>
+                <li>Prefira aleatoriedade verdadeira sobre padrões</li>
+            </ul>
+        </section>
+    </main>
+        <main class="content-page">
+        <h1>Gerador Matemático de Senhas</h1>
+        
+        <div class="generator-container">
+            <div class="controls">
+                <label for="length">Comprimento (12-64):</label>
+                <input type="number" id="length" min="12" max="64" value="16">
+                
+                <label>
+                    <input type="checkbox" id="uppercase" checked> Letras Maiúsculas (A-Z)
+                </label>
+                
+                <label>
+                    <input type="checkbox" id="lowercase" checked> Letras Minúsculas (a-z)
+                </label>
+                
+                <label>
+                    <input type="checkbox" id="numbers" checked> Números (0-9)
+                </label>
+                
+                <label>
+                    <input type="checkbox" id="symbols" checked> Símbolos (!@#$%^&*)
+                </label>
+                
+                <button id="generate">Gerar Senha</button>
+            </div>
+            
+            <div class="result">
+                <input type="text" id="password" readonly>
+                <button id="copy">Copiar</button>
+                
+                <div class="entropy-display">
+                    <h3>Análise de Segurança:</h3>
+                    <p>Entropia: <span id="entropy-bits">0</span> bits</p>
+                    <p>Tempo estimado para quebrar: <span id="break-time">instantâneo</span></p>
+                </div>
+            </div>
+        </div>
+        
+        <section class="how-it-works">
+            <h2>Como Funciona Nosso Algoritmo</h2>
+            <p>Utilizamos o método matemático de Fisher-Yates para embaralhamento seguro e a API Web Crypto para geração de números verdadeiramente aleatórios.</p>
+        </section>
+    </main>
+        <main class="content-page">
+        <h1>Verificador Matemático de Força de Senha</h1>
+        
+        <div class="checker-container">
+            <label for="password-input">Digite sua senha para análise:</label>
+            <input type="password" id="password-input">
+            <button id="analyze">Analisar</button>
+            
+            <div class="results">
+                <h3>Resultados:</h3>
+                <div class="meter">
+                    <div id="strength-meter"></div>
+                </div>
+                
+                <ul id="feedback-list"></ul>
+                
+                <div class="math-results">
+                    <p>Comprimento: <span id="length-result">0</span> caracteres</p>
+                    <p>Conjunto de caracteres: <span id="charset-size">0</span> possibilidades</p>
+                    <p>Entropia: <span id="entropy-result">0</span> bits</p>
+                    <p>Combinações possíveis: <span id="combinations">0</span></p>
+                    <p>Tempo estimado para quebrar: <span id="time-to-crack">instantâneo</span></p>
+                </div>
+            </div>
+        </div>
+    </main>
+        <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Sobre</h3>
+                <p>MathSecure é um projeto educacional sobre segurança digital e matemática aplicada.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Recursos</h3>
+                <ul>
+                    <li><a href="#">Artigos</a></li>
+                    <li><a href="#">Ferramentas</a></li>
+                    <li><a href="#">Calculadoras</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <p>email@mathsecure.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 MathSecure. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
